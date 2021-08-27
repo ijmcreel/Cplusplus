@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1629600179 source:/home/ijmc/Desktop/Cplusplus/Rand_Pin/main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<unistd.h>
+	<cmath>
+
