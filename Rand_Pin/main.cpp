@@ -38,50 +38,55 @@ int main()
     do
     {
 
-        for(int i=0; i<16; i++)
+        for(int j=0; j<16; j++)
         {
-            // sleep(1);
+
+            sleep(1);
             seed=time(0);
             split=(seed%336)+101;
 
             seed=seed/split;
-        }
-        for(int i=0; i<split; i++)
-        {
-            seed=seed-(split*100);
+
+            for(int i=0; i<split; i++)
+            {
+                seed=seed-(split*100);
 //cout<<"split: "<<split<<" Seed: "<<seed<<endl;
 //steps++;
 
-        }
-        steps=steps%10;
-        if(seed<0)
-        {
-            seed=seed*-1;
-            seed=seed+1;
-        }
-        Nums=seed/split;
-
-        while(Nums!=1)
-        {
-            if(Nums%2>0)
-            {
-                Nums=(Nums*3)+1;
-                Inc++;
             }
-            while(Nums%2==0)
+            steps=steps%10;
+            if(seed<0)
             {
-                if(Nums%2==0)
+                seed=seed*-1;
+                seed=seed+1;
+            }
+            Nums=seed/split;
+
+            while(Nums!=1)
+            {
+                if(Nums%2>0)
                 {
-                    Nums=Nums/2;
+                    Nums=(Nums*3)+1;
                     Inc++;
                 }
+                else
+                {
+
+                    Nums=Nums/2;
+                    Inc++;
+
+                }
+
+
             }
-        }
+
+
 //cout<<"inc "<<Inc<<endl;
-        Bits[p]=(Inc%2);
-        p++;
-        Inc=0;
-        sleep(1);
+
+            Bits[j]=(Inc%2);
+            Inc=0;
+        }
+        //  sleep(1);
 
         for(int i=15; i>0; i--)
         {
